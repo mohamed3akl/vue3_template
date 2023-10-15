@@ -6,8 +6,7 @@
           <user-menu />
         </v-col>
         <v-col lg="9">
-          <patient-landing v-if="AuthedUser.user_type == 0"></patient-landing>
-          <doctor-landing v-if="AuthedUser.user_type == 1"></doctor-landing>
+          
         </v-col>
       </v-row>
     </v-container>
@@ -16,12 +15,10 @@
 
 <script>
 import { mapGetters } from "vuex";
-import PatientLanding from "@/components/Home/PatientLanding.vue";
-import DoctorLanding from "@/components/Home/DoctorLanding.vue";
 
 export default {
   name: "Home",
-  components: { PatientLanding , DoctorLanding },
+  components: {  },
   mounted() {
     this.$store.commit("SET_LOADING", { name: "ui", value: false });
 
